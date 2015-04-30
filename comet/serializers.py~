@@ -1,0 +1,11 @@
+from django.forms import widgets
+from rest_framework import serializers
+from ellipse.models import Task
+from comet.serializers import UserSerializer
+
+class TaskSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Task
+        fields = ('taskname', 'deadline', 'user')
+

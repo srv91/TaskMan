@@ -1,0 +1,6 @@
+<div>
+  <p>Activity :</p>
+  {% for l in log %}
+  <p>{{ l.change_message }}</p>
+  {% endfor %}
+</div>

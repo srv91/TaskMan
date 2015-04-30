@@ -1,0 +1,10 @@
+<div>
+  <p>Activity :</p>
+  {% for l in log %}
+    {% if l.flag == 1 %}
+      <p> Added task : </p>{{ l.task.taskname }}
+    {% elif l.flag == 2 %}
+      <p> Deleted task : </p>{{ l.task.taskname }}
+    {% endif %}
+  {% endfor %}
+</div>

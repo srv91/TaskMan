@@ -1,0 +1,11 @@
+{% load url from future %}
+<div>
+  <form action="/ellipse/dashboard/" method="post">
+    {% csrf_token %}
+    <p>Username <input type="text" name="username"></p>
+    <p>Password <input type="password" name="password"></p>
+    <p>Email <input type="text" name="email"></p>
+    <p><button type="submit" name="login">Login</button></p>
+  </form>
+</div>
+
