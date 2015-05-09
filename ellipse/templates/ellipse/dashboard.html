@@ -14,12 +14,15 @@
             <option value="Sort in date added">Sort in date added</option>
             <option value="Sort in deadlines">Sort in deadlines</option>
     </select>
-    {% if tasks %}
-      {% for tasko in tasks %}
-        <p><tr><td><input type="checkbox" name="t" value={{ tasko.id }}></td><td>{{ tasko.taskname }}</td><td>{{ tasko.added_on }}</td><td>{{ tasko.completed }}</td><td>{{ tasko.deadline }}</td></tr></p>
-      {% endfor %}
-    {% endif %}
     <p><button type="submit" name="modify">Modify</button></p>
+    <table border="0" cellpadding="4" width="100%">
+      <tr><td></td><td>Taskname</td><td>Date Added</td><td>Completed</td><td>Deadline</td></tr>
+      {% if tasks %}
+        {% for tasko in tasks %}
+          <tr><td><input type="checkbox" name="t" value={{ tasko.id }}></td><td>{{ tasko.taskname }}</td><td>{{ tasko.added_on }}</td><td>{{ tasko.completed }}</td><td>{{ tasko.deadline }}</td></tr>
+        {% endfor %}
+      {% endif %}
+    </table>
   </form>
   <p><a href="{% url 'ellipse:useractivity' user.id %}" role="button">Show Activity</a></p>
 </div>
