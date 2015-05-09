@@ -96,7 +96,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-DATE_INPUT_FORMATS = ('%d %b, %Y')
+DATE_INPUT_FORMATS = ('%d %b, %Y',)
 
 USE_TZ = True
 
